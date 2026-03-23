@@ -11,7 +11,7 @@ Built with a **modern RAG (Retrieval-Augmented Generation) architecture**, this 
 
 ---
 
-### 🔥 Live Demo
+## 🔥 Live Demo
 
 ## Frontend (Vercel):[Live Link](https://multi-rag.vercel.app/)
 
