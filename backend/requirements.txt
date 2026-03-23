@@ -6,21 +6,16 @@ requests
 
 # LLM
 groq
-langchain
-langchain_openai
 
-# Vector store (choose ONE)
+# Vector store
 faiss-cpu
+numpy
 
 # Data processing
 beautifulsoup4
 youtube_transcript_api
 yt-dlp
+pypdf
 
-# Optional (only if used)
-chromadb
-langchain_chroma
-
-sentence-transformers
-bs4
+# Embeddings (API-based)
 huggingface_hub
