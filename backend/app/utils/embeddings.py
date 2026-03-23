@@ -1,40 +1,32 @@
+    
 """
 Purpose:
-Generates embeddings using sentence-transformers.
+Generate embeddings using HuggingFace Inference API (FREE)
 """
 
-from sentence_transformers import SentenceTransformer
-from app.core.config import settings
-import numpy as np
+from huggingface_hub import InferenceClient
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
-
-# load model once
-model = SentenceTransformer(settings.sentence_transformer_model)
+# Initialize client
+client = InferenceClient(
+    model="sentence-transformers/all-MiniLM-L6-v2",
+    token=os.getenv("HF_TOKEN")
+)
 
 def get_embeddings(texts):
-    """
-    Converts list of texts into embeddings.
-
-    Args:
-        texts (List[str])
-
-    Returns:
-        List[List[float]]
-    """
     if not texts or not isinstance(texts, list):
-        raise ValueError("Invalid input for embeddings")
+        raise ValueError("Invalid input")
 
-    embeddings = model.encode(texts)
+    texts = [str(t).strip() for t in texts if t]
 
-    # ✅ Convert numpy → Python list
-    if isinstance(embeddings, np.ndarray):
-        embeddings = embeddings.tolist()
+    embeddings = []
 
-    # ✅ Safety check
-    if len(embeddings) == 0:
-        raise ValueError("Embeddings empty")
+    for text in texts:
+        emb = client.feature_extraction(text)
+        embeddings.append(emb)
 
     return embeddings
-    
-
