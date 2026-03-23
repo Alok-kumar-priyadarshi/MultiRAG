@@ -20,3 +20,6 @@ yt-dlp
 # Optional (only if used)
 chromadb
 langchain_chroma
+
+sentence-transformers
+bs4
