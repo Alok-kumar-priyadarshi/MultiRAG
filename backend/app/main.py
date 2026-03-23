@@ -16,8 +16,8 @@ app = FastAPI(
 )
 
 
-@app.get("/health")
-def health_check():
+@app.get("/")
+def root():
     return {"status": "ok"}
 
 app.add_middleware(
