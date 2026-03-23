@@ -19,3 +19,4 @@ pypdf
 
 # Embeddings (API-based)
 huggingface_hub
+python-multipart
