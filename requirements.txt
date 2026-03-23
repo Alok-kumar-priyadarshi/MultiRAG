@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-dotenv
+chromadb
+langchain_chroma
+sentence-transformers
+groq
+youtube_transcript_api
+yt-dlp 
+openai-whisper
+bs4
+ipykernel
+pydantic
+requests
+faiss-cpu
+yt-dlp
+beautifulsoup4
