@@ -1,17 +1,22 @@
 fastapi
 uvicorn
 python-dotenv
-chromadb
-langchain_chroma
-sentence-transformers
-groq
-youtube_transcript_api
-yt-dlp 
-openai-whisper
-bs4
-ipykernel
 pydantic
 requests
+
+# LLM
+groq
+langchain
+langchain_openai
+
+# Vector store (choose ONE)
 faiss-cpu
-yt-dlp
+
+# Data processing
 beautifulsoup4
+youtube_transcript_api
+yt-dlp
+
+# Optional (only if used)
+chromadb
+langchain_chroma
