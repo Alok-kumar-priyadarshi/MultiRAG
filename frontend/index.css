@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+
+
+body{
+    /* @apply bg-[#0f172a] text-gray-100 transition-colors duration-300; */
+      @apply bg-[#0f172a] text-white;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #475569;
+  padding: 6px;
+}
+
+th {
+  background-color: #1e293b;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 10px;
+}
+
+/* Markdown Styling */
+.markdown {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Headings */
+.markdown h1, .markdown h2, .markdown h3 {
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.markdown p {
+  margin-bottom: 8px;
+}
+
+/* Lists */
+.markdown ul, .markdown ol {
+  padding-left: 18px;
+  margin-bottom: 8px;
+}
+
+/* Tables */
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.markdown th, .markdown td {
+  border: 1px solid #475569;
+  padding: 8px;
+}
+
+.markdown th {
+  background-color: #1e293b;
+}
+
+/* Code */
+.markdown code {
+  background: #1e293b;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
